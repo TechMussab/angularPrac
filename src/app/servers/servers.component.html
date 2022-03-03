@@ -1,11 +1,23 @@
+
 <label>Server Name</label>
-<input
+<div class="col-sm-12 col-lg-offset-7 " style="">
+<!--<input-->
+<!--type="text"-->
+<!--class="form-control"-->
+<!--(input)="onUpdateServer($event)"-->
+<!--&gt;-->
+<!--<p>{{sName}}</p>-->
+  <input
 type="text"
 class="form-control"
-(input)="onUpdateServer($event)" )
+[(ngModel)]="sName"
 >
+<p>{{sName}}</p>
 
 
-<button>
-
+<button [disabled]="!allowAdd"  (click)="onCreateServer()" class="btn btn-primary">Change Status</button>
+  <p [innerText]="creationStatus"></p>
+<button class="btn btn-danger">
+bro
 </button>
+</div>

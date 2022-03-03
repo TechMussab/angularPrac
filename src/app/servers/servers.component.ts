@@ -12,16 +12,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowAdd=false
-  creationStatus='None'
-  sName=''
+  creationStatus='';
 
-  constructor() { }
+  sName='asd';
 
+  constructor() {
+    setTimeout(
+      ()=>{
+        this.allowAdd=true;
+      },1000
+    );
+  }
+  onCreateServer()
+  {
+    this.creationStatus='added '+this.sName
+    alert(this.creationStatus)
+    setTimeout(()=>{
+      this.creationStatus=''
+    },2000);
+  }
   ngOnInit() {
   }
   onUpdateServer(event:any)
   {
-
+    this.sName=event.target.value;
   }
 
 }

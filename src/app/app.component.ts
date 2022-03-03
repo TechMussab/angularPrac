@@ -28,11 +28,5 @@ export class AppComponent {
   {
 
   }
-  onCreateServer()
-  {
-    this.status='changed'
-    setTimeout(()=>{
-      this.status=''
-    },2000);
-  }
+
 }
